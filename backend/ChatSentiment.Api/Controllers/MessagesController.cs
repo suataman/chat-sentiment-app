@@ -32,7 +32,8 @@ namespace ChatSentiment.Api.Controllers
             try
             {
                 // 🔹 Artık Hugging Face yerine senin Python AI servisine istek atıyoruz
-                var aiServiceUrl = "http://localhost:8000/analyze";
+                var aiServiceUrl = "https://chat-sentiment-app-ai-service.onrender.com/analyze";
+
                 var aiContent = new StringContent(JsonSerializer.Serialize(new { text = msg.Text }), Encoding.UTF8, "application/json");
 
                 var aiResponse = await _httpClient.PostAsync(aiServiceUrl, aiContent);
