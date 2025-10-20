@@ -20,7 +20,7 @@ namespace ChatSentiment.Api.Controllers
             _httpClient = new HttpClient();
         }
 
-        // 🟢 POST /api/messages → mesaj kaydet + AI sonucu al
+       
         [HttpPost]
         public async Task<IActionResult> PostMessage([FromBody] Message msg)
         {
@@ -31,7 +31,7 @@ namespace ChatSentiment.Api.Controllers
 
             try
             {
-                // 🔹 Artık Hugging Face yerine senin Python AI servisine istek atıyoruz
+                // AI servisine istek at
                 var aiServiceUrl = "https://chat-sentiment-app-ai-service.onrender.com/analyze";
 
                 var aiContent = new StringContent(JsonSerializer.Serialize(new { text = msg.Text }), Encoding.UTF8, "application/json");
@@ -55,7 +55,7 @@ namespace ChatSentiment.Api.Controllers
                 sentimentResult = "hata";
             }
 
-            // 4️⃣ Mesajı kaydet
+            // Mesajı kaydet
             msg.Sentiment = sentimentResult;
             msg.CreatedAt = DateTime.UtcNow;
             _context.Messages.Add(msg);
@@ -64,7 +64,7 @@ namespace ChatSentiment.Api.Controllers
             return Ok(new { sentiment = sentimentResult });
         }
 
-        // 🟡 GET /api/messages → son mesajları getir
+        // GET /api/messages → son mesajları getir
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
