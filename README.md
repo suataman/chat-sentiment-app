@@ -47,9 +47,9 @@ python app.py
 ```
 ### 2. Backend (.NET Core + SQLite)
 ```bash
-cd ai-service
-pip install flask gradio_client
-python app.py 
+cd backend
+dotnet restore
+dotnet run 
 ```
 ### 3. Frontend (React + Vite)
 ```bash
