@@ -154,3 +154,4 @@ C:\Users\ASUS\chat-sentiment-app\backend\ChatSentiment.Api\obj\Debug\net9.0\refi
 C:\Users\ASUS\chat-sentiment-app\backend\ChatSentiment.Api\obj\Debug\net9.0\ChatSentiment.Api.pdb
 C:\Users\ASUS\chat-sentiment-app\backend\ChatSentiment.Api\obj\Debug\net9.0\ChatSentiment.Api.genruntimeconfig.cache
 C:\Users\ASUS\chat-sentiment-app\backend\ChatSentiment.Api\obj\Debug\net9.0\ref\ChatSentiment.Api.dll
+C:\Users\ASUS\chat-sentiment-app\backend\ChatSentiment.Api\obj\Debug\net9.0\ChatSentiment.Api.sourcelink.json
