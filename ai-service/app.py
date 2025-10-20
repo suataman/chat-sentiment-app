@@ -17,11 +17,15 @@ def analyze():
             text=text,
             api_name="//predict"
         )
+        print("Input text:", text)
+        print("Result:", result)
 
         return jsonify({"sentiment": result})
+
     except Exception as e:
         print("AI servis hatası:", e)
         return jsonify({"sentiment": "hata"}), 500
+
 
 
 if __name__ == "__main__":
