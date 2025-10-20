@@ -12,7 +12,7 @@ const Chat = () => {
     setMessages(prev => [...prev, newMessage]);
 
     try {
-      const res = await fetch("http://localhost:5152/api/messages", {
+      const res = await fetch("https://chat-sentiment-app-ncly.onrender.com/api/messages", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text })
